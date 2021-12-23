@@ -18,8 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #59808080
-background-alt = #aaFFFFFF
+background = #CC301C43
+background-alt = #aa000000
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
@@ -30,13 +30,13 @@ alert = #bdeaff
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 35
+height = 33
 offset-x = 0
 offset-y = 0
 radius = 1.4
 fixed-center = false
 
-bottom = true
+
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -44,7 +44,7 @@ foreground = ${colors.foreground}
 line-size = 0
 line-color = #ffffff
 
-border-size = 1
+border-size = 0
 border-color = #4D000000
 
 padding-left = 0
@@ -64,18 +64,17 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem pulseaudio memory cpu wlan eth temperature date battery powermenu
+modules-right = filesystem pulseaudio memory cpu wlan eth temperature date powermenu
 
-separator = 
-
+separator = /        
 tray-position = right
-tray-padding = 0
+tray-padding = 20
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-override-redirect = true
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -113,11 +112,12 @@ interval = 10
 
 mount-0 = /
 
-label-mounted = %{F#FFFFFF}%mountpoint%%{F#FFFFFF}: %percentage_used%%
-label-mounted-foreground = #FFFFFFFF
+label-mounted = %{F#9F62DA}%mountpoint%%{F#9F62DA}: %percentage_used%%
+label-mounted-foreground = #9F62DA
 label-mounted-background = ${colors.background}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.background}
+
 
 
 [module/bspwm]
@@ -140,7 +140,7 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
-; label-separator =  | 
+; label-separator =  |
 
 [module/i3]
 type = internal/i3
@@ -154,7 +154,8 @@ wrapping-scroll = false
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;    
+ws-icon-2 = 3;   
+ws-icon-3 = 4;misc
 
 
 
@@ -228,23 +229,23 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #FFFFFFFF
+format-prefix-foreground = #FF9471
 format-prefix-background = ${colors.background}
 format-underline = #ffffff
 label = %percentage:2%%
 label-background = ${colors.background}
-label-foreground =#FFFFFFFF
+label-foreground =#FF9471
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #FFFFFFFF
+format-prefix-foreground = #F1647D
 format-prefix-background = ${colors.background}
 format-underline = #ffffff
 label = %percentage_used%%
 label-background = ${colors.background}
-label-foreground =#FFFFFFFF
+label-foreground =#F1647D
 
 
 [module/wlan]
@@ -296,12 +297,12 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix =" "
-format-prefix-foreground = #FFFFFFFF
+format-prefix-foreground = #FFC981
 format-prefix-background = ${colors.background}
 format-underline = #ffffff
 
 label = %date% %time%  
-label-foreground = #FFFFFFFF
+label-foreground = #FFC981
 label-background = ${colors.background}
 
 
@@ -310,15 +311,15 @@ type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
-label-volume-foreground = #FFFFFFFF
+label-volume-foreground = #E15DAF
 label-volume-background = ${colors.background}
-
+label-volume-underline = #E15DAF
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #000000
-bar-volume-foreground-1 = #FFD700
+bar-volume-foreground-1 = #E15DAF
 bar-volume-gradient = true
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -326,8 +327,8 @@ bar-volume-fill = -
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
+bar-volume-empty-foreground = #E15DAF
+bar-volume-underline = #FFFFFF
 [module/alsa]
 type = internal/alsa
 
@@ -365,10 +366,10 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging =  <animation-discharging> <label-discharging>
+format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -449,4 +450,4 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
+; vim:ft=dosiniT
