@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #394d51
+background = #6E394d51
 background-alt = #4445
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -59,8 +59,8 @@ font-4 = Font Awesome 5 Free Solid:pixelsize=10;2
 font-5 = Font Awesome 5 Brands:pixelsize=10;2
 
 
-modules-left =  i3
-modules-center =   xwindow
+modules-left = bspwm i3
+modules-center = mpd
 modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan battery temperature 
 
 tray-position = right
