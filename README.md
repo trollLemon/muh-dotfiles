@@ -1,7 +1,8 @@
 # muh-dotfiles
 
 
-![muhrice](https://user-images.githubusercontent.com/90001607/171930474-94116c10-c809-428d-899a-492cf6552952.png)
+![Screenshot_20220604_102213](https://user-images.githubusercontent.com/90001607/172018564-4d259f94-79de-42f8-b3e9-1f0b6a2808e5.png)
+
 
 
 
