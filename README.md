@@ -15,4 +15,4 @@ For polybar, you need Nerd fonts and Font awesome.
 
 The spotify status in the bottom bar uses python scripts from this repository: https://github.com/dietervanhoof/polybar-spotify-controls, so you will need to configure that for the spotify stuff to work.
 
-Wallpaper I found is in the backgrounds folder.
+Wallpaper I found is in the backgrounds folder. I didnt make it, and I dont remember where I found it. I will add that when I find where I got it from.
